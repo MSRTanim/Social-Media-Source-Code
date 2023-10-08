@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from demo.foxthemes.net/socialite/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 17:43:12 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="icon" type="image/png">
+
+    <!-- Basic Page Needs
+        ================================================== -->
+    <title>Socialite Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Socialite is - Professional A unique and beautiful collection of UI elements">
+
+    <!-- icons
+    ================================================== -->
+    <link rel="stylesheet" href="assets/css/icons.css">
+
+    <!-- CSS 
+    ================================================== -->
+    <link rel="stylesheet" href="assets/css/uikit.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="assets/css/tailwind.css" rel="stylesheet"> 
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap');
+        body{
+            background-color: #f8f9fa; font-family: Inter;
+        }
+ .uk-container, header .header_inner {
+    max-width: 1200px !important;
+}
+header {
+    box-shadow: none;
+  background-color: #fff;
+  border-bottom: 1px solid #E5E9EF;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  height: 76px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1400px;
+  margin: auto;
+  width: 100%;
+  padding: 0 35px;
+}
+
+header .header_inner .left-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header_inner .left-side #logo {
+  display: inline-block;
+  margin-right: 20px;
+  font-size: 21px;
+  letter-spacing: .9px;
+}
+
+header .header_inner .left-side #logo img {
+  max-width: none;
+  height: 28px;
+}
+
+header .header_inner .left-side #logo img.logo_inverse, header .header_inner .left-side #logo img.logo_mobile {
+  display: none;
+}
+
+header .header_inner .left-side .triger {
+  position: absolute;
+  left: 25px;
+  top: 20px;
+  color: #464646;
+  display: none;
+  font-size: 19px;
+}
+
+header .header_inner .right-side {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-left: auto;
+}
+
+header .header_inner .right-side .header-links-item {
+  padding: 10px;
+}
+
+header .header_inner .right-side .header-links-item svg {
+  width: 25px;
+  height: 25px;
+  color: #676666;
+}
+
+header .header_inner .right-side .header-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  margin-left: 15px;
+}
+
+.is_fixed {
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+  -webkit-box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.04);
+          box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.04);
+  background-color: white;
+  border: 0;
+}
+
+.header_dropdown {
+  width: 330px;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.header_dropdown ul {
+  padding: 0;
+  margin: 0 -20px;
+}
+
+.header_dropdown ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-decoration: none;
+  color: #808080;
+  position: relative;
+  padding: 8px 20px;
+  font-weight: 500;
+}
+
+.header_dropdown ul li a:hover {
+  background: #f7f7f7;
+}
+
+
+.header_menu {
+  padding: 0;
+  margin: 0;
+}
+
+.header_menu li {
+  list-style: none;
+  display: inline;
+  padding: 0;
+  margin-left: 7px;
+}
+
+.header_menu li a {
+  color: #b3b3b3;
+  font-size: 0.92rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  padding: 0.8rem 0.6rem;
+  border-radius: 0.375rem;
+}
+
+.header_menu li a:hover,
+.header_menu li a.active {
+  color: black;
+}
+
+.header_menu li ul li a {
+  color: #797979;
+}
+
+.header_menu li ul li a:hover {
+  color: #000;
+}
+
+        @media (min-width: 1240px) {
+
+            .uk-container,
+            header .header_inner {
+                max-width: 1200px !important;
+            }
+        }
+
+        .header_inner {
+            padding: 0 20px !important;
+        }
+
+        .header_menu li a {
+            font-size: 16px;
+            padding: 0.8rem 0.9rem;
+        }
+
+        .header_menu li.uk-active a {
+            color: #1e2be8 !important
+        }
+
+        .banner1 {
+            position: absolute;
+            width: 54%;
+            height: 100%;
+            top: 0px;
+            right: 0px;
+            display: flex;
+            -webkit-box-align: center;
+            align-items: center;
+        }
+
+        .banner1 .objectWrapper {
+            margin-left: auto;
+            position: relative;
+            display:flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner1 .objectWrapper .Image__ImageWrapper {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            margin: 0px;
+        }
+
+        .objectWrapper .dashboardWrapper {
+            position: absolute;
+            right: 0px;
+        }
+
+        .objectWrapper .dashboardWrapper img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            margin: 0px;
+        }
+
+
+        .demo-card {
+            text-align: center;
+            color: #4a4a4a;
+            position: relative;
+            text-transform: capitalize;
+        }
+
+        .demo-card img {
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            margin-right: 1px;
+        }
+
+        .demo-card:hover.demo-card img,
+        .demo-card:hover span.new {
+            transition: 0.4s ease all;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .demo-card span.new {
+            color: white;
+            padding: 2px 9px;
+            border-radius: 6px;
+            position: absolute;
+            z-index: 1;
+            right: -12px;
+            top: -13px;
+            box-shadow: 2px 2px 3px 0px #cecece;
+        }
+
+        .demo-card p {
+            margin-top: 15px;
+        }
+
+        @media (max-width: 992px) {
+            .banner1 {
+            width: 80%;
+    position: relative;
+    margin: auto;}
+        }
+    </style>
+</head>
+
+<body class="overflow-x-hidden">
+
+
+    <div id="Wrapper">
+
+        <header class="border-none bg-transparent" uk-sticky="cls-active: is_fixed ; cls-inactive: bg-transparent">
+            <div class="header_inner">
+                <div class="left-side">
+
+                    <!-- Logo -->
+                    <div id="logo">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="">
+                            <img src="assets/images/logo-light.html" class="logo_inverse" alt="">
+                            <img src="assets/images/logo-mobile.png" class="logo_mobile" alt="">
+                        </a>
+                    </div>
+
+                    <div class="triger" uk-toggle="target: .header_menu ; cls: is-visible">
+                        <i class="uil-bars"></i>
+                    </div>
+                    <div class="overly" uk-toggle="target: .header_menu ; cls: is-visible"></div>
+
+                </div>
+                <div class="right-side uk-visible@s">
+
+                    <ul class="header_menu" uk-scrollspy-nav="closest: li; scroll: true">
+                        <li><a href="#home" uk-scroll> Home</a> </li>
+                        <li><a href="#demos" uk-scroll> Demos</a> </li>
+                        <li><a href="#features" uk-scroll> Features</a> </li>
+                    </ul>
+                    <a href="#" class="bg-gradient-to-bl font-semibold from-purple-400 px-8 py-2 ml-8 rounded text-sm text-white to-blue-600 hover:shadow-lg hover:text-white">
+                        BUY NOW 
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <div class="lg:py-40 pt-24 pb-12 relative -mt-20 bg-white" id="home">
+            <div class="banner1">
+                <div class="objectWrapper">
+                    <img src="assets/images/demos/first-banner.png" alt="" class="Image__ImageWrapper">
+                    <div class="dashboardWrapper">
+                        <img src="assets/images/demos/second-banner.png" alt="" class="shadow-2xl">
+                    </div>
+                </div>
+            </div>
+            <div class="uk-container mx-auto lg:mt-28">
+                <div class="lg:w-5/12 lg:space-y-6 text-center lg:text-left lg:block flex flex-col justify-center items-center">
+                   
+                    <h1 class="font-bold lg:leading-snug lg:text-4xl text-2xl">
+                        The Ultimate Social Sharing Network Template
+                    </h1>
+                        <p> 
+                            is developer-friendly, rich with features and highly customizable.
+                            We’ve followed the highest industry standards to bring you the very best Social template
+                        </p>
+                    <div class="flex gap-4"> 
+                        <a href="#" 
+                        class="bg-gradient-to-bl font-semibold from-purple-500 to-blue-600 px-10 py-2 rounded text-sm text-white 
+                        hover:shadow-lg hover:text-white">
+                            BUY NOW </a>
+
+                        <a href="#" class="border border-gray-400 font-semibold px-8 py-2 rounded text-sm">Explore Demos
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <div class="lg:py-20 py-12 lg:mb-24 relative" id="demos">
+            <div class="uk-container mx-auto">
+
+                <div class="text-center lg:mb-20 mb-10 max-w-md mx-auto">
+                    <h1 class="lg:text-3xl text-2xl mb-2"> Explore our demos</h1>
+                    <p> Explore our demos pages on different layout of designs. More
+                        demos are coming soon.</p>
+                </div>
+
+
+                <div class="uk-child-width-1-3@m uk-child-width-1-2@s uk-flex-center"
+                    uk-scrollspy="target: > div; cls: uk-animation-slide-bottom-small; delay: 100" uk-grid>
+
+                    <div>
+                        <a target="_blank" href="landing.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/landing.png" alt="">
+                                <p> landing </p>
+                                <span class="new bg-red-500">New</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="feed-layout-2.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/feed-layout-2.png" alt="">
+                                <p> feed layout 2 </p>
+                                <span class="new bg-red-500">new</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a target="_blank" href="fundraiser.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/fundraiser.png" alt="">
+                                <p> Fundraiser </p>
+                                <span class="new bg-red-500">New</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="timeline-fundraiser.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/fundraiser-timeline.png" alt="">
+                                <p> Fundraiser Timeline </p>
+                                <span class="new bg-red-500">New</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="birthdays.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/brithdays.png" alt="">
+                                <p> birthdays </p>
+                                <span class="new bg-red-500">new</span>
+                            </div>
+                        </a>
+                    </div>
+ 
+                    <div>
+                        <a target="_blank" href="feed.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/feed.png" alt="">
+                                <p> feed </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="products.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/products.png" alt="">
+                                <p>  Marketplace  </p>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="product-single.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/product-preview.png" alt="">
+                                <p>  product post </p> 
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="albums.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/albums.png" alt="">
+                                <p> albums </p> 
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="blogs.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/blogs.png" alt="">
+                                <p> Blog </p>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="blog-read.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/blog-description.png" alt="">
+                                <p> Blog read</p> 
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="courses.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/courses.png" alt="">
+                                <p> Courses </p>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="course-intro.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/course-intro.png" alt="">
+                                <p> Courses intro</p> 
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="events.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/events.png" alt="">
+                                <p> Events </p>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="forums.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/forums.png" alt="">
+                                <p> Forums </p>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="groups.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/groups.png" alt="">
+                                <p> Groups </p>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="chats-friend.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/chats-friend.png" alt="">
+                                <p> Chat friends </p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="chats-group.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/chats-group.png" alt="">
+                                <p> Chat Groups</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="games.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/games.png" alt="">
+                                <p> Games </p> 
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="jobs.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/jobs.png" alt="">
+                                <p> Jobs </p>
+                                <span class="new bg-green-500">Update</span> 
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="job-details.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/jobs-description.png" alt="">
+                                <p> Jobs description</p> 
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="videos.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/videos.png" alt="">
+                                <p> Video </p>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="video-watch.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/videos-watch.png" alt="">
+                                <p>  Video Watch </p> 
+                            </div>
+                        </a>
+                    </div>  
+                    <div>
+                        <a target="_blank" href="pages.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/pages.png" alt="">
+                                <p> pages </p> 
+                            </div>
+                        </a>
+                    </div> 
+                    
+                    <div>
+                        <a target="_blank" href="timeline.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/timeline.png" alt="">
+                                <p> timeline </p> 
+                                <span class="new bg-green-500">Update</span> 
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="timeline-page.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/timeline-page.png" alt="">
+                                <p> timeline page </p>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="timeline-group.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/timeline-group.png" alt="">
+                                <p> timeline group </p>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="timeline-event.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/timeline-event.png" alt="">
+                                <p> timeline Event </p> 
+                            </div>
+                        </a>
+                    </div>  
+                    <div>
+                        <a target="_blank" href="pages-setting.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/pages-setting.png" alt="">
+                                <p> Setting   </p> 
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="pages-setting2.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/pages-setting2.png" alt="">
+                                <p> setting 2   </p> 
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="create-group.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/create-group.png" alt="">
+                                <p> create-group   </p> 
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="create-page.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/create-page.png" alt="">
+                                <p> create page  </p> 
+                            </div>
+                        </a>
+                    </div> 
+
+
+                    <div>
+                        <a target="_blank" href="development-components.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/dev-components.png" alt="">
+                                <p> development components </p>
+                                <span class="new bg-red-500">New</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="development-plugins.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/dev-plugins.png" alt="">
+                                <p> development plugins </p>
+                                <span class="new bg-red-500">new</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div>
+                        <a target="_blank" href="development-icons.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/dev-icons.png" alt="">
+                                <p> development icons </p>
+                                <span class="new bg-red-500">New</span>
+                            </div>
+                        </a>
+                    </div> 
+
+                    <div>
+                        <a target="_blank" href="pages-upgrade.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/pages-upgrade.png" alt="">
+                                <p> pages upgrade </p>
+                                <span class="new bg-red-500">New</span>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="pages-about.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/pages-about.png" alt="">
+                                <p> pages about </p>
+                                <span class="new bg-red-500">New</span>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="pages-contact.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/pages-contact-us.png" alt="">
+                                <p> pages contact-us </p>
+                                <span class="new bg-red-500">New</span>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="pages-privacy.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/pages-privacy.png" alt="">
+                                <p> pages privacy </p>
+                                <span class="new bg-red-500">New</span>
+                            </div>
+                        </a>
+                    </div> 
+                   
+
+                    <div>
+                        <a target="_blank" href="form-login.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/form-login.png" alt="">
+                                <p> login </p>
+                            </div>
+                        </a>
+                    </div> 
+                    <div>
+                        <a target="_blank" href="form-register.html">
+                            <div class="demo-card">
+                                <img src="assets/images/demos/form-register.png" alt="">
+                                <p> register </p>
+                            </div>
+                        </a>
+                    </div> 
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-white"  id="features"> 
+
+            <svg width="100%" height="100px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="none" x="0px" y="0px" viewBox="0 0 2560 100" style="enable-background:new 0 0 2560 100" xml:space="preserve" class="-mt-24 absolute fill-current text-white invisible lg:visible">
+                <polygon points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+            
+            <div class="container m-auto  py-20">
+
+                <div class="text-center mb-3">
+                    <h1 class="text-3xl font-semibold"> Features that you really love </h1>
+                    <p class="mt-2"> Start building fast, beautiful and modern looking websites in no time using our
+                        themes.</p>
+                </div>
+
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 px-4">
+
+                    <!-- our first cad -->
+                    <div class="rounded p-6">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-12 h-12 text-blue-500 mb-4 mt-6">
+                            <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"></path>
+                        </svg>
+                        <h2 class="text-xl font-bold leading-10"> Extended color palette </h2>
+                        <h2>
+                            <p class="font-medium text-gray-600"> A beautiful color palette that can be easily modified with our
+                                nicely coded Sass files. </p>
+
+                        </h2>
+                    </div>
+
+                    <!-- our first cad -->
+                    <div class="rounded p-6">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-12 h-12 text-blue-500 mb-4 mt-6">
+                            <path d="M11 17a1 1 0 001.447.894l4-2A1 1 0 0017 15V9.236a1 1 0 00-1.447-.894l-4 2a1 1 0 00-.553.894V17zM15.211 6.276a1 1 0 000-1.788l-4.764-2.382a1 1 0 00-.894 0L4.789 4.488a1 1 0 000 1.788l4.764 2.382a1 1 0 00.894 0l4.764-2.382zM4.447 8.342A1 1 0 003 9.236V15a1 1 0 00.553.894l4 2A1 1 0 009 17v-5.764a1 1 0 00-.553-.894l-4-2z">
+                            </path>
+                        </svg>
+                        <h2 class="text-xl font-bold leading-10"> Everything is modular </h2>
+                        <h2>
+                            <p class="font-medium text-gray-600"> Nicely customized components that can be reused anytime and
+                                anywhere in your project.</p>
+
+                        </h2>
+                    </div>
+
+                    <!-- our first cad -->
+                    <div class="rounded p-6">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-12 h-12 text-blue-500 mb-4 mt-6">
+                            <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z">
+                            </path>
+                        </svg>
+                        <h2 class="text-xl font-bold leading-10"> 700+ Components </h2>
+                        <h2>
+                            <p class="font-medium text-gray-600"> Nicely customized components that can be reused anytime and
+                                anywhere in your project </p>
+
+                        </h2>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Scripts
+    ================================================== -->
+    <script src="assets/js/tippy.all.min.js"></script>
+     <script src="../../code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/tippy.all.min.js"></script>
+    <script src="assets/js/uikit.js"></script>
+    <script src="assets/js/simplebar.min.html"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/bootstrap-select.min.js"></script>
+</body>
+
+
+<!-- Mirrored from demo.foxthemes.net/socialite/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 20 Jul 2023 17:43:27 GMT -->
+</html>
